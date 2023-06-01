@@ -1,0 +1,7 @@
+.Card {
+    background: lightblue;
+    padding: 10px;
+    border-radius: 1.5rem;
+    width: 20%;
+    text-align: center;
+}
