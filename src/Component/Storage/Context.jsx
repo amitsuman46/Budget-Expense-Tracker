@@ -1,6 +1,7 @@
 import { createContext, useReducer } from "react";
 
 export const budgetContext = createContext();
+
 const reducerFunction = (state, action) => {
     if(action.type==='ADD')
     {
@@ -13,9 +14,10 @@ const reducerFunction = (state, action) => {
     
     const [state, budgetDispatch] = useReducer(reducerFunction, initialState);
 
-    return (<budgetContext.Provider value={{state:state, reducerFunction:reducerFunction}}>
+    return (<budgetContext.Provider value={{state:state, reducerFunction:budgetDispatch}}>
         {props.children}
     </budgetContext.Provider>)
 }
+
 export default ContextProvider;
 

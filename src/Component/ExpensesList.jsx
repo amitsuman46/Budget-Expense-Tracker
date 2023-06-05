@@ -13,8 +13,7 @@ const Dummy_array =[{
 }]
 const ExpensesList = () => {
   const context = useContext(budgetContext);
-  return 
-  (
+  return (
     <ul style={{marginLeft:'0px', padding:'0px'}}>     
     {context.state.expenses.map((array)=>(<ExpensesListItem activity={array.name} amount={array.cost}/>))}
     </ul>
